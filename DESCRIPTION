@@ -1,0 +1,15 @@
+Package: rPackageTemplate
+Title: Generates a skeleton template for new packages.
+Version: 0.0.0.9000
+Authors@R: person("Jeff", "Kaplan", , "jeffreydkaplan@gmail.com", role = c("aut",     "cre"))
+Author: Jeff Kaplan  <jeffreydkaplan@gmail.com>
+Maintainer: Jeff Kaplan  <jeffreydkaplan@gmail.com>
+Description: A package which generates an R package template, including
+             tests and travis-ci.
+Depends: R (>= 3.1.2)
+License: MIT (c) 2015 Jeff Kaplan
+Suggests:
+    devtools,
+    roxygen2,
+    testthat
+LazyData: true
