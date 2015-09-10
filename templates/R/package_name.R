@@ -1,9 +1,10 @@
-#' Generate a skeleton template for your new package
+#' ${package_name} package
 #'
 #'
-#' @name rPackageTemplate
+#' @name ${package_name}
 #' @docType package
-NULL
+#'
+
 
 #' Returns TRUE
 #'
