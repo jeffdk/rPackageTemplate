@@ -5,6 +5,7 @@
 #' and checks that we can read and write in the current directory
 #'
 #' @param package_name char, new package directory name to create
+#' @return logical can we write a new template
 is_all_clear_to_write_new_template <- function(package_name) {
 
     exists <- file.access(package_name, mode = 0) == 0
@@ -25,11 +26,20 @@ is_all_clear_to_write_new_template <- function(package_name) {
 }
 
 
+#' Where is rPackageTemplate installed
 #'
-#'
-#'
-copy_template_to_dir <- function(package_name) {
+#' Returns a string which is the location where rPackageTemplate is installed
+#' we need this to know where the templates are!
+#' 
+#' @return string install directory for rPackageTemplate
+where_is_rPackageTemplate_installed <- function() {
     packages <- as.data.frame(installed.packages())
     location_of_rPackageTemplate <- packages$LibPath['rPackageTemplate']
-    location_of_rPackageTemplate
+    as.character(location_of_rPackageTemplate)
+}
+
+#' Copy template to directory
+#'
+#'
+copy_template_to_dir <- function(dir) {
 }
