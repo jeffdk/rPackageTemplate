@@ -23,3 +23,13 @@ is_all_clear_to_write_new_template <- function(package_name) {
    
     return( !any(exists, cannot_read, cannot_write))
 }
+
+
+#'
+#'
+#'
+copy_template_to_dir <- function(package_name) {
+    packages <- as.data.frame(installed.packages())
+    location_of_rPackageTemplate <- packages$LibPath['rPackageTemplate']
+    location_of_rPackageTemplate
+}
