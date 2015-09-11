@@ -40,6 +40,35 @@ where_is_rPackageTemplate_installed <- function() {
 
 #' Copy template to directory
 #'
+#' Creates dir in current directory and copies templates to there
 #'
+#' @param dir
 copy_template_to_dir <- function(dir) {
+
+    from_location <- paste0(where_is_rPackageTemplate_installed(),
+                            "/rPackageTemplate/templates/")
+    to_location <- paste0(dir, "/")
+
+    stopifnot(is_all_clear_to_write_new_template(dir))
+    stopifnot(is_all_clear_to_write_new_template(to_location))
+    
+    system(paste("cp -R",
+                 from_location,
+                 to_location)
+           )
+}
+
+do_replacements_in_template <- function(template_dir, list_of_replacements) {
+    list.files(dir, recursive=TRUE, all.files=TRUE)
+    ###https://gist.github.com/mages/1544009
+}
+
+
+do_replacement <- function(file, key, value) {
+
+    formatted_key <- paste0( "${", key, "}")
+    
+    input <- readLines(file)
+    output <- gsub(formatted_key, value, input)
+    cat(output, file=file, sep='\n')
 }
