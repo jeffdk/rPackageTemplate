@@ -3,7 +3,6 @@
 #' Prompts user to enter keys for new template
 #'
 #' @export
-
 new_template <- function() {
     replacements <- list()
     print("Please provide the following information for your new package (no spaces, please): ")
@@ -25,4 +24,7 @@ new_template <- function() {
     rename_package_file(replacements$package_name)
 
     message("Done.  Your new package is ready!")
+}
+
+git_init <- function(dir_name) {
 }
