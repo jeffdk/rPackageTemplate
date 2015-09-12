@@ -6,7 +6,7 @@ Author: ${first_name} ${last_name}  <${email}>
 Maintainer: ${first_name} ${last_name}  <${email}>
 Description: Generic Description from rPackageTemplate
 Depends: R (>= 3.1.2)
-License: 
+License: Proprietary.  Property of author and/or author's employer at inception.
 Suggests:
     devtools,
     roxygen2,

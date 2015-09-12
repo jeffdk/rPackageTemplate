@@ -8,3 +8,5 @@ Contact: ${email}
 
  * https://github.com/new
  * https://travis-ci.org/
+ * Change the 'License:' field in DESCRIPTION if you want your package to
+ be open source.
