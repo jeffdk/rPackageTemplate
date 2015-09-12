@@ -3,8 +3,7 @@
 #'
 #' @name ${package_name}
 #' @docType package
-#'
-
+NULL
 
 #' Returns TRUE
 #'
