@@ -26,5 +26,10 @@ new_template <- function() {
     message("Done.  Your new package is ready!")
 }
 
+#' Initialize Git for package
+#'
+#' Initilze git and add freshly generated files.
+#'
+#' @param dir_name directory
 git_init <- function(dir_name) {
 }

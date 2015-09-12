@@ -7,7 +7,7 @@ Maintainer: Jeff Kaplan  <jeffreydkaplan@gmail.com>
 Description: A package which generates an R package template, including
              tests and travis-ci.
 Depends: R (>= 3.1.2)
-License: MIT (c) 2015 Jeff Kaplan
+License: MIT + file LICENSE
 Suggests:
     devtools,
     roxygen2,
