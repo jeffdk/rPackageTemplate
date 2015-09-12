@@ -23,6 +23,9 @@ new_template <- function() {
     do_replacements_in_template(replacements$package_name, replacements)
     rename_package_file(replacements$package_name)
 
+    message("Finished replacements, initializing git.")
+    git_init(replacements$package_name)
+
     message("Done.  Your new package is ready!")
 }
 
@@ -32,4 +35,10 @@ new_template <- function() {
 #'
 #' @param dir_name directory
 git_init <- function(dir_name) {
+    startDir <- getwd()
+    setwd(dir_name)
+    system("git init")
+    system("git add .")
+    system("git commit -m 'Initial commit (auto from rPackageTemplate)'")
+    setwd(startDir)
 }
