@@ -58,17 +58,44 @@ copy_template_to_dir <- function(dir) {
            )
 }
 
-do_replacements_in_template <- function(template_dir, list_of_replacements) {
-    list.files(dir, recursive=TRUE, all.files=TRUE)
-    ###https://gist.github.com/mages/1544009
+#' Do replacements in template
+#'
+#' Given the directory of a freshly copied template, do all of the specified
+#' replacements
+#'
+#' @param template_dir string, directory of the fresh template
+#' @param list_of_replacements list in replacement key='value' format
+do_replacements_in_template <- function(template_dir, list_of_replacements){
+    files <- list.files(template_dir, recursive=TRUE, all.files=TRUE)
+    
+    for(file in files) {
+        do_replacements_in_file(paste0(template_dir, "/", file),
+                                list_of_replacements)
+    }
 }
 
+#' Do list_of_replacements in a single file, file
+do_replacements_in_file <- function(file, list_of_replacements) {
+    
+    for(repl_key in names(list_of_replacements)) {
+        repl_value <- list_of_replacements[[repl_key]]
+        do_replacement(file, repl_key, repl_value)
+    }
+}
 
+#' Do replacement
+#'
+#' Replace keys in file with value.  Keys must be indentified in the file
+#' with bash like syntax; i.e. ${key}
+#'
+#' @param file string, filename to do replacement in
+#' @param key string, replace this key (identified by ${key}) in the file
+#' @param value string, replace given key with this value
 do_replacement <- function(file, key, value) {
 
     formatted_key <- paste0( "${", key, "}")
     
     input <- readLines(file)
-    output <- gsub(formatted_key, value, input)
+    output <- gsub(formatted_key, value, input, fixed=TRUE)
     cat(output, file=file, sep='\n')
 }
