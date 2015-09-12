@@ -42,7 +42,7 @@ where_is_rPackageTemplate_installed <- function() {
 #'
 #' Creates dir in current directory and copies templates to there
 #'
-#' @param dir
+#' @param dir copy template to new directory with this name
 copy_template_to_dir <- function(dir) {
 
     from_location <- paste0(where_is_rPackageTemplate_installed(),
@@ -75,6 +75,9 @@ do_replacements_in_template <- function(template_dir, list_of_replacements){
 }
 
 #' Do list_of_replacements in a single file, file
+#'
+#' @param file string, file to do replacements in
+#' @param list_of_replacements list in replacement key='value' format
 do_replacements_in_file <- function(file, list_of_replacements) {
     
     for(repl_key in names(list_of_replacements)) {
@@ -101,6 +104,8 @@ do_replacement <- function(file, key, value) {
 }
 
 #' Rename the package_name.R file appropriately
+#'
+#' @param package_name string, name of package
 rename_package_file <- function(package_name) {
     file.rename(paste0(package_name, "/R/package_name.R"),
                 paste0(package_name, "/R/", package_name, ".R"))
