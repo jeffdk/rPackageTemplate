@@ -99,3 +99,9 @@ do_replacement <- function(file, key, value) {
     output <- gsub(formatted_key, value, input, fixed=TRUE)
     cat(output, file=file, sep='\n')
 }
+
+#' Rename the package_name.R file appropriately
+rename_package_file <- function(package_name) {
+    file.rename(paste0(package_name, "/R/package_name.R"),
+                paste0(package_name, "/R/", package_name, ".R"))
+}
