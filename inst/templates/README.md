@@ -6,5 +6,5 @@ Contact: ${email}
 
 ### Set up checklist:
 
+ * https://github.com/new
  * https://travis-ci.org/
- * https://github.com/

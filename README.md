@@ -6,3 +6,6 @@ To use you should have the following packages:
  - devtools
  - roxygen2
  - testthat
+
+Additionally, `git` should be installed so rPackageTemplate can
+auto-initialize your new package as a `git` repository.

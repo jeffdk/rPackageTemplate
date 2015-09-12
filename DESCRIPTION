@@ -1,6 +1,6 @@
 Package: rPackageTemplate
 Title: Generates a Skeleton Template for New Packages
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("Jeff", "Kaplan", , "jeffreydkaplan@gmail.com", role = c("aut",     "cre"))
 Author: Jeff Kaplan  <jeffreydkaplan@gmail.com>
 Maintainer: Jeff Kaplan  <jeffreydkaplan@gmail.com>
