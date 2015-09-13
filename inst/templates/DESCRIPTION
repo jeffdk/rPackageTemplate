@@ -5,7 +5,7 @@ Authors@R: person("${first_name}", "${last_name}", , "${email}", role = c("aut",
 Author: ${first_name} ${last_name}  <${email}>
 Maintainer: ${first_name} ${last_name}  <${email}>
 Description: Generic Description from rPackageTemplate
-Depends: R (>= 3.1.2)
+Depends: R (>= 3.1.0)
 License: Proprietary.  Property of author and/or author's employer at inception.
 Suggests:
     devtools,
