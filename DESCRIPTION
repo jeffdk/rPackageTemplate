@@ -6,7 +6,7 @@ Author: Jeff Kaplan  <jeffreydkaplan@gmail.com>
 Maintainer: Jeff Kaplan  <jeffreydkaplan@gmail.com>
 Description: A package which generates an R package template, including
              tests and travis-ci.
-Depends: R (>= 3.1.2)
+Depends: R (>= 3.1.0)
 License: MIT + file LICENSE
 Suggests:
     devtools,
